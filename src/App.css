@@ -1,0 +1,71 @@
+.App {
+    font-size: 16px;
+    height: 100%;
+}
+
+.App-content-container {
+    left: 0;
+    right: 0;
+    height: 100%;
+    position: absolute;
+}
+
+.App-content {
+    position: relative;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.sidebar-content-offset {
+    left: 160px;
+}
+
+.dummy {
+    width: 100%;
+    background-color: blue;
+    margin-bottom: 2rem;
+    height: 200px;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .hidden-sm {
+        display: none;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .hidden-md {
+        display: none;
+    }
+ }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .hidden-lg {
+        display: none;
+    }
+}
