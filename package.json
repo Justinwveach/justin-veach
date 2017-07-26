@@ -1,5 +1,5 @@
 {
-  "name": "test-react",
+  "name": "justin-veach",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,5 +19,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Justinwveach/justin-veach.git"
+  },
+  "author": "Justin Veach",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Justinwveach/justin-veach/issues"
+  },
+  "homepage": "https://github.com/Justinwveach/justin-veach#readme"
 }
