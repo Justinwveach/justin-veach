@@ -34,10 +34,10 @@ class Navbar extends Component {
         let classNamesToUse = "Navbar";
         let isMobile = false;
         if (this.props.windowWidth < 992) {
-            this.setState({'showHideMenu': 'Navbar-mobile'});
+            classNamesToUse += " Navbar-mobile";
             isMobile = true;
         } else {
-            this.setState({'showHideMenu': 'Navbar-desktop'});
+            classNamesToUse += " Navbar-desktop";
         }
 
         let currentPath = window.location.pathname
@@ -46,7 +46,7 @@ class Navbar extends Component {
         }
 
         return (
-            <div className={this.state.showHideMenu}>
+            <div className={classNamesToUse}>
                 {isMobile ? (
                     <div className="Navbar-mobile-top-bar">
                     <div className="Navbar-icon" />
@@ -54,7 +54,10 @@ class Navbar extends Component {
                     </div>) : null}
                 <ul>
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/Travel">{this.props.windowWidth}</Link></li>
+                    <li><Link to="/Travel">Travel</Link></li>
+                    <li><Link to="/Trading">Trading</Link></li>
+                    <li><Link to="/Resume">Resume</Link></li>
+                    <li><Link to="/Holler">Holler</Link></li>
                 </ul>
             </div>
         );
