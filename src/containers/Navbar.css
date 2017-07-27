@@ -3,7 +3,6 @@
     color: white;
     text-align: left;
     top: 0;
-
 }
 
 .Navbar-desktop {
@@ -14,22 +13,51 @@
 }
 
 .Navbar-mobile {
-    position: relative;
-    height: 80px;
+    height: 60px;
+    overflow-y: hidden;
+}
+
+.Navbar-mobile-top-bar {
+    height: 60px;
+}
+
+.Navbar-icon {
+    float: left;
+    background-color: blue;
+}
+
+.Navbar-hamburger {
+    float: right;
+    background-color: green;
+}
+
+.Navbar-sticky-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.Navbar-open {
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background-color: black;
 }
 
 .Navbar ul {
     list-style-type: none;
-
 }
-
 .Navbar li {
     color: white;
     font-size: 1.75rem;
     font-weight: bold;
     padding-bottom: 1rem;
 }
-
 .Navbar a {
     color: white;
     text-decoration: none;

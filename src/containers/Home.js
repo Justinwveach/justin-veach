@@ -9,6 +9,7 @@ class Home extends Component {
           <h1>Scratch</h1>
           <p>A simple note taking app</p>
         </div>
+
       </div>
     );
   }

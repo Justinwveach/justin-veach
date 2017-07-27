@@ -22,23 +22,23 @@ class App extends Component {
             containerCssClasses += ' sidebar-content-offset';
         }
 
+        var currentPath = window.location.pathname
+
      return (
-       <div className="App">
-           <Navbar/>
-         <div className={containerCssClasses}>
-             <div className="App-content">
-             <Routes />
-             <div className="dummy" />
-             <div className="dummy" />
-             <div className="dummy" />
-             <div className="dummy" />
-             <div className="dummy" />
+         <div className="App">
+            <Navbar />
+            <div className={containerCssClasses}>
+                <div className="App-content">
+                    <div className="App-page-content">
+                        <Routes />
+                    </div>
 
-
-             <Footer lgHidden mdHidden />
-         </div>
+                    {!currentPath.includes('Travel')
+                    ? <Footer />
+                    : null }
+                </div>
+            </div>
         </div>
-       </div>
      );
    }
 }

@@ -6,34 +6,51 @@
 .App-content-container {
     left: 0;
     right: 0;
-    height: 100%;
     position: absolute;
+    min-height: 100%;
 }
 
 .App-content {
-    position: relative;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+}
+
+.App-page-content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
 }
 
 .App-intro {
-  font-size: large;
+    font-size: large;
 }
 
 .sidebar-content-offset {
     left: 160px;
 }
-
 .dummy {
     width: 100%;
     background-color: blue;
@@ -42,28 +59,41 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
+
 /* Extra small devices (phones, less than 768px) */
+
+
 /* No media query since this is the default in Bootstrap */
 
+
 /* Small devices (tablets, 768px and up) */
+
 @media (min-width: 768px) {
     .hidden-sm {
         display: none;
     }
 }
 
+
 /* Medium devices (desktops, 992px and up) */
+
 @media (min-width: 992px) {
     .hidden-md {
         display: none;
     }
- }
+}
+
 
 /* Large devices (large desktops, 1200px and up) */
+
 @media (min-width: 1200px) {
     .hidden-lg {
         display: none;
