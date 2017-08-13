@@ -46,19 +46,16 @@ class Navbar extends Component {
         }
 
         return (
-            <div className={classNamesToUse}>
-                {isMobile ? (
-                    <div className="Navbar-mobile-top-bar">
-                    <div className="Navbar-icon" />
-                    <button className="Navbar-hamburger" onClick={this.toggleMenu}>Togs</button>
-                    </div>) : null}
-                <ul>
+            <div className="Navbar">
+            <div className="Navbar-table">
+                <ul id="horizontal-list">
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/Travel">Travel</Link></li>
                     <li><Link to="/Trading">Trading</Link></li>
                     <li><Link to="/Resume">Resume</Link></li>
                     <li><Link to="/Holler">Holler</Link></li>
                 </ul>
+            </div>
             </div>
         );
     }

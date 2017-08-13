@@ -3,50 +3,18 @@
     color: white;
     text-align: left;
     top: 0;
+    height: 80px;
 }
 
-.Navbar-desktop {
-    width: 160px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.Navbar-table {
+    display: table;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;
 }
 
-.Navbar-mobile {
-    height: 60px;
-    overflow-y: hidden;
-}
-
-.Navbar-mobile-top-bar {
-    height: 60px;
-}
-
-.Navbar-icon {
-    float: left;
-    background-color: blue;
-}
-
-.Navbar-hamburger {
-    float: right;
-    background-color: green;
-}
-
-.Navbar-sticky-header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.Navbar-open {
-    top: 0;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 1001;
-    background-color: black;
+ul#horizontal-list li {
+	display: inline;
 }
 
 .Navbar ul {
@@ -57,21 +25,10 @@
     text-decoration: none;
 }
 
-.Navbar a:hover {
-    background-color: #ffffff;
-    color: #666;
-    padding-bottom: .75rem;
-    padding-top: .75rem;
-    padding-left: 1a.75rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-
 .Navbar a {
     color: white;
     font-size: 1.2rem;
     font-weight: 400;
-    display: block;
     transition: all 0.3s ease;
     text-decoration: none;
     padding: .5rem;

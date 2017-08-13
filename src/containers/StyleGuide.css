@@ -1,0 +1,10 @@
+.StyleGuide {
+
+}
+
+.button {
+    padding: 1rem;
+    background-color: #777;
+    color: white;
+    text-transform: uppercase;
+}
