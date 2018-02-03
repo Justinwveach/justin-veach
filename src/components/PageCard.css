@@ -1,0 +1,17 @@
+.PageCard {
+    height: 100vh;
+    width: 100vw;
+}
+
+.PageCard--default {
+    position: absolute;
+}
+
+.PageCard--sticky {
+    position: fixed;
+    top: 0;
+}
+
+.PageCard--hidden {
+    position: relative;
+}

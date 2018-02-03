@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import './Home.css';
+import PageCard from '../components/PageCard'
 
 class Home extends Component {
+
+    constructor(props) {
+        super(props);
+        this.handleScrollCallback = this.handleScrollCallback.bind(this);
+    }
+
   render() {
     return (
-      <div className="Home">
-        <div className="lander">
-          <h1>Scratch</h1>
-          <p>A simple note taking app</p>
-        </div>
-
+      <div>
+        <h1>Title</h1>
       </div>
     );
   }

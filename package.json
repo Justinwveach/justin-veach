@@ -9,11 +9,13 @@
     "react-dom": "^15.6.1",
     "react-hide-show-utils": "^0.1.2",
     "react-leaflet": "^1.4.1",
+    "react-onscroll": "^1.0.4",
     "react-router-dom": "^4.1.2",
     "react-router-sitemap": "^1.1.1",
     "react-window-size": "^1.1.0"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
     "react-scripts": "1.0.10"
   },
   "scripts": {

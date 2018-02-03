@@ -1,13 +1,11 @@
 .App {
     font-size: 16px;
-    height: 100%;
+    display: absolute;
+    height: 100vh;
+    background: red;
 }
 
 .App-content-container {
-    left: 0;
-    right: 0;
-    position: absolute;
-    min-height: 100%;
 }
 
 .App-content {
