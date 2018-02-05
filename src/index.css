@@ -20,13 +20,13 @@ input[type=file] {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 h2 {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
 }
 h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 h4 {
     font-size: 1.25rem;
@@ -36,4 +36,34 @@ h1, h2, h3, h4, h5, h6 {
     color: #333;
     font-family: 'PT Serif', serif;
     font-weight: 600;
+}
+
+p {
+    font-size: 1rem;
+}
+
+input:focus {
+    outline: none !important;
+}
+
+.flex-container {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.rounded {
+    border-radius: 2px;
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+    p {
+        font-size: 1.5rem;
+    }
 }

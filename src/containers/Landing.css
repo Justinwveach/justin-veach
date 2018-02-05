@@ -1,5 +1,36 @@
 .Landing {
-    background-color: blue;
-    width: 100%;
+    background: linear-gradient(to bottom right, #0f1626, #331626);
+}
+
+.Landing-title {
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    font-size: 4rem;
+}
+
+.Landing-subtitle {
+    text-align: center;
+    color: #efefef;
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
+}
+
+.Landing-container {
+    position: relative;
     height: 100%;
+}
+
+.Landing-textContainer {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    width: 100%;
+}
+
+.Landing-scrollIndicator {
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    bottom: 85%;
 }

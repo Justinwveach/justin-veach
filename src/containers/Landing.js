@@ -9,12 +9,19 @@ export default class Landing extends Component {
 
     render() {
 
-        var classValue = "Landing " + this.props.isSticky;
+        var classValue = "Landing PageCard-content " + this.props.isSticky;
 
         return (
 
             <div className={classValue}>
-                <h1>Title</h1>
+                <div className="Landing-container">
+                    <div className="Landing-textContainer">
+                        <h1 className="Landing-title">Justin Veach</h1>
+                        <h3 className="Landing-subtitle">Software Developer. Culinary Comforter. Human.</h3>
+                    </div>
+                </div>
+
+                <div className="Landing-scrollIndicator">Scroll Up</div>
             </div>
         );
     }

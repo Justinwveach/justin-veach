@@ -9,8 +9,8 @@ import windowSize from 'react-window-size';
  */
 export default function wrappedInPageCard(WrappedComponent, index) {
 
-    const stickyClass = "PageCard--sticky";
-    const defaultClass = "PageCard--default";
+    const stickyClass = "PageCard-content--sticky ";
+    const defaultClass = "PageCard-content--default";
 
     // todo register windowDidResize to adjust offsetToHide
 
@@ -33,7 +33,8 @@ export default function wrappedInPageCard(WrappedComponent, index) {
 
             this.state = {
                 sticky: index === 1 ? true : false,
-                isVisible: true
+                isVisible: true,
+                index: index
             }
         }
 
@@ -87,9 +88,13 @@ export default function wrappedInPageCard(WrappedComponent, index) {
         }
 
         render() {
+            var classNames = this.state.isVisible ? "PageCard" : "PageCard PageCard--hidden";
+            if (this.state.index !== 1) {
+                classNames = classNames + " PageCard-spacer";
+            }
             return(
-                <div className={this.state.isVisible ? "PageCard" : "PageCard PageCard--hidden"}>
-                    <WrappedComponent isSticky={this.state.sticky ? "PageCard--sticky" : "PageCard--default"} {...this.props}/>
+                <div className={classNames}>
+                    <WrappedComponent isSticky={this.state.sticky ? "PageCard-content--sticky" : "PageCard-content--default"} {...this.props}/>
                     <ScrollEvent handleScrollCallback={this.handleScrollCallback} />
                 </div>
 

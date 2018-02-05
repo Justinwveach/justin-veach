@@ -3,15 +3,25 @@
     width: 100vw;
 }
 
-.PageCard--default {
+.PageCard--hidden {
+    position: relative;
+}
+
+.PageCard-spacer {
+    margin-top: 75px;
+}
+
+.PageCard-content {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+.PageCard-content--default {
     position: absolute;
 }
 
-.PageCard--sticky {
+.PageCard-content--sticky {
     position: fixed;
     top: 0;
-}
-
-.PageCard--hidden {
-    position: relative;
 }
