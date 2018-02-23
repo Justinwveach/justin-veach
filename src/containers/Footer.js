@@ -4,7 +4,7 @@ import './Footer.css';
 class Footer extends Component {
   render() {
 
-      var classValue = "Footer " + this.props.isSticky;
+      var classValue = "Footer " + this.props.rootClass + " " + this.props.isSticky;
       return (
             <div className={classValue}>
                 Footer

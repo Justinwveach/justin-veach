@@ -1,5 +1,38 @@
 .About {
     width: 100%;
     height: 100%;
-    background-color: #ff533d;
+    /*background-color: #ff533d;*/
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.About-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat:no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background: url('../images/pasta.jpg');
+}
+
+.About-overlay {
+    background: #1e4d79;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(120deg, rgba(20, 20, 20,.9), rgba(0, 0, 0,.4));/* rgba(30,77,121,0), rgba(30,77,121,1));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(120deg, rgba(20, 20, 20,.9), rgba(0, 0, 0,.4)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.About-content {
+    position: relative;
+}
+
+.About h1 {
+    color: white;
 }

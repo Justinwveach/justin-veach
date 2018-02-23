@@ -9,7 +9,7 @@ export default class Work extends Component {
 
     render() {
 
-        var classValue = "Work " + this.props.isSticky;
+        var classValue = "Work " + this.props.rootClass + " " + this.props.isSticky;
 
         return (
             <div className={classValue}>

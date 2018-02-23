@@ -11,7 +11,7 @@ export default class Experience extends Component {
 
     render() {
 
-        var classValue = "Experience PageCard-content " + this.props.isSticky;
+        var classValue = "Experience " + this.props.rootClass + " " + this.props.isSticky;
         var mobileOverview = new ExperienceOverview("Mobile - iOS | Android", "");
 
         mobileOverview.addProjects(["Aegir Maps - Indoor Mapping", "Whirly Dirly Words", "Portion Tracker"]);
@@ -21,7 +21,7 @@ export default class Experience extends Component {
             <div className={classValue}>
                 <h1>Experience</h1>
 
-                <ExperienceCard overview={mobileOverview}/>
+                {/*<ExperienceCard overview={mobileOverview}/>*/}
             </div>
         );
     }

@@ -9,11 +9,11 @@ export default class Resume extends Component {
 
     render() {
 
-        var classValue = "Resume " + this.props.isSticky;
+        var classValue = "Resume " + this.props.rootClass + " " + this.props.isSticky;
 
         return (
             <div className={classValue}>
-                <h1>Title</h1>
+                <h1>Resume</h1>
             </div>
         );
     }

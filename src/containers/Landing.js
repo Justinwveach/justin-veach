@@ -9,7 +9,7 @@ export default class Landing extends Component {
 
     render() {
 
-        var classValue = "Landing PageCard-content " + this.props.isSticky;
+        var classValue = "Landing " + this.props.rootClass + " " + this.props.isSticky;
 
         return (
 
@@ -17,7 +17,7 @@ export default class Landing extends Component {
                 <div className="Landing-container">
                     <div className="Landing-textContainer">
                         <h1 className="Landing-title">Justin Veach</h1>
-                        <h3 className="Landing-subtitle">Software Developer. Culinary Comforter. Human.</h3>
+                        <h3 className="Landing-subtitle">Software Developer. Culinary Comforter. Memphian.</h3>
                     </div>
                 </div>
 

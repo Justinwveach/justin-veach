@@ -1,0 +1,72 @@
+.Project {
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom right, rgba(235, 235, 235, 1.0), rgba(245, 245, 245, 1.0));/* rgba(30,77,121,0), rgba(30,77,121,1));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 1.0), rgba(245, 245, 245, 1.0)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.Project-leftSection {
+    width: 40%;
+    float: left
+}
+
+.Project-rightSection {
+    width: 60%;
+    height: 100%;
+    float: right;
+    position: relative;
+}
+
+.Project-image {
+    width: 100%;
+    max-height: 100%;
+    max-width: 1100px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.Project-smallImage {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-left: var(--PageCard-paddingNegative-xs);
+    width: calc(100% + calc(var(--PageCard-padding-xs) * 2))
+}
+
+.Project-content {
+    position: relative;
+    height: 100%;
+}
+
+.Project-imageLeft {
+    transform: rotate(-25deg) translateX(-50%);
+    -webkit-transform: rotate(-25deg) translateX(-50%);
+    transform-origin: top left;
+}
+
+.Project-imageRight {
+    transform: rotate(25deg) translateX(-50%);
+    -webkit-transform: rotate(25deg) translateX(-50%);
+    transform-origin: center;
+    top: 15% !important;
+
+}
+
+@media (max-width: 767px) {
+    .Project-leftSection {
+        width: 100%;
+        float: none;
+    }
+
+    .Project-image-xs {
+        width: 350px;
+        position: absolute;
+        left: 50%;
+        top: 8%;
+    }
+
+    .hidden-sm {
+        display: none;
+    }
+}

@@ -94,7 +94,8 @@ export default function wrappedInPageCard(WrappedComponent, index) {
             }
             return(
                 <div className={classNames}>
-                    <WrappedComponent isSticky={this.state.sticky ? "PageCard-content--sticky" : "PageCard-content--default"} {...this.props}/>
+                    {/* rootClass is the main class that needs to be applied to the WrappedComponent */}
+                    <WrappedComponent isSticky={this.state.sticky ? "PageCard-content--sticky" : "PageCard-content--default"} rootClass="PageCard-content" {...this.props}/>
                     <ScrollEvent handleScrollCallback={this.handleScrollCallback} />
                 </div>
 

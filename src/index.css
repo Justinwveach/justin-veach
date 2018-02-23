@@ -1,3 +1,8 @@
+:root {
+    --PageCard-padding-xs: 2rem;
+    --PageCard-paddingNegative-xs: -2rem;
+}
+
 body {
   margin: 0;
   padding: 0;
