@@ -1,5 +1,23 @@
 .Resume {
     width: 100%;
     height: 100%;
-    background-color: #49ab81;
+    background: #ff533d;
+    background: -webkit-linear-gradient(to bottom right, #ff533d, #ff422c);
+    background: linear-gradient(to bottom left, #8860d0, #5680e9);
+}
+
+.Resume, .Resume h1, .Resume h4, .Resume p {
+    color: white;
+}
+
+.Resume-moreInfo {
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    bottom: 85%;
+}
+
+.Resume a {
+    color: white;
+    text-decoration: underline;
 }

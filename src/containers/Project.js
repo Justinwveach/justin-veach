@@ -55,11 +55,11 @@ export default class Project extends Component {
                         <p><a href={this.props.link} target="_blank">{this.props.linkTitle}&nbsp;</a></p>
                     </div>
 
-                    <div className="Project-rightSection hidden-xs">
+                    <div className="Project-rightSection hidden-sm">
                         <img className="Project-image" src={getImage(this.props.projectImage)}/>
                     </div>
 
-                    <div className="Project-smallImage visible-xs">
+                    <div className="Project-smallImage visible-sm">
                         <img className={smallImageClassNames} src={getImage(this.props.projectImage)}/>
                     </div>
                 </div>

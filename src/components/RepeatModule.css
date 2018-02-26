@@ -1,0 +1,18 @@
+.RepeatModule {
+    padding-left: 0;
+}
+
+.RepeatModule-noBullets {
+    list-style-type: none;
+}
+
+@media (max-width: 767px) {
+    .RepeatModule--collapsed {
+        display: inline-block;
+    }
+
+    .RepeatModule--collapsed li {
+        display: inline-block;
+        margin-right: 1rem;
+    }
+}

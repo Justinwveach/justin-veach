@@ -1,5 +1,7 @@
 .Landing {
     /*background: linear-gradient(to bottom right, #0f1626, #331626);*/
+    background: #ff533d;
+    background: -webkit-linear-gradient(to bottom right, #ff533d, #ff422c);
     background: linear-gradient(to bottom right, #ff533d, #ff422c);
 }
 

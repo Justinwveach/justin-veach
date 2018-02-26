@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
-p {
+p, ul {
     font-size: 1rem;
 }
 
@@ -68,7 +68,13 @@ input:focus {
 /* Medium devices (desktops, 992px and up) */
 
 @media (min-width: 992px) {
-    p {
+    p, ul {
         font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    p, ul {
+        font-size: 1.25rem;
     }
 }
