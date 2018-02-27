@@ -18,19 +18,19 @@ export default class CardScroll extends Component {
     }
 
     render() {
-        const LandingCard = wrappedInPageCard(Landing, 1);
+        const LandingCard = wrappedInPageCard(Landing, 1, true);
         const AboutCard = wrappedInPageCard(About, 2);
-        const ProjectSeparatorCard = wrappedInPageCard(Separator, 3);
+        const ProjectSeparatorCard = wrappedInPageCard(Separator, 3, true);
         const ProjectCard = wrappedInPageCard(Project, 4)
         const ProjectCardTwo = wrappedInPageCard(Project, 5)
         const ProjectCardThree = wrappedInPageCard(Project, 6)
         const ProjectCardFour = wrappedInPageCard(Project, 7)
         //const ProjectCardFive = wrappedInPageCard(Project, 8)
-        const ExperienceSeparatorCard = wrappedInPageCard(Separator, 8)
+        const ExperienceSeparatorCard = wrappedInPageCard(Separator, 8, true)
         const ExperienceCard = wrappedInPageCard(Experience, 9)
         const ResumeCard = wrappedInPageCard(Resume, 10)
         //const FooterCard = wrappedInPageCard(Footer, 11);
-        const EndSeparatorCard = wrappedInPageCard(Separator, 11)
+        const EndSeparatorCard = wrappedInPageCard(Separator, 11, true)
         const indoorMappingDescription = "While working at Lokion Interactive, I was part of a small team that built an Indoor Mapping product from the ground up. My primary contributions included creating, maintaining, and testing the Android SDK, while assisting when needed on the iOS side."
         const qScopeDescription = "This app was one of the larger and impactful apps I built while at International Paper. Essentially, the app provided a way for workers to document the quality of shipping containers during the process of loading the product. It potentially saved the company millions in damaged product claims by proving the product was in good condition when shipped."
         const airCentralDescription = "As freelance work, I created a new, modern website for a local Heating and Air Conditioning business. I built the website with React and followed guidelines to help with SEO."

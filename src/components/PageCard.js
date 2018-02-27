@@ -3,14 +3,15 @@ import ScrollEvent from 'react-onscroll';
 import ReactDOM from 'react-dom';
 import './PageCard.css';
 import windowSize from 'react-window-size';
+import MobileDetect from 'mobile-detect';
 
 /**
  * index - starts at 1
  */
-export default function wrappedInPageCard(WrappedComponent, index) {
+export default function wrappedInPageCard(WrappedComponent, index, fullScreen) {
 
-    const stickyClass = "PageCard-content--sticky ";
-    const defaultClass = "PageCard-content--default";
+    const stickyClass = 'PageCard-content--sticky ';
+    const defaultClass = 'PageCard-content--default';
 
     // todo register windowDidResize to adjust offsetToHide
 
@@ -30,11 +31,15 @@ export default function wrappedInPageCard(WrappedComponent, index) {
             super(props);
             this.handleScrollCallback = this.handleScrollCallback.bind(this);
             this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+            this.getComponent = this.getComponent.bind(this);
+
+            var md = new MobileDetect(window.navigator.userAgent);
 
             this.state = {
                 sticky: index === 1 ? true : false,
                 isVisible: true,
-                index: index
+                index: index,
+                isMobile: md.phone() !== null || md.tablet() !== null
             }
         }
 
@@ -45,7 +50,6 @@ export default function wrappedInPageCard(WrappedComponent, index) {
             offsetToHide = window.innerHeight * -1;
 
             var rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
-            console.log("Index: " + index + " is at " + rect.y + " with offset to hide: " + offsetToHide);
         }
 
         componentWillUnmount() {
@@ -57,6 +61,10 @@ export default function wrappedInPageCard(WrappedComponent, index) {
         }
 
         handleScrollCallback() {
+            if (this.state.isMobile) {
+                return;
+            }
+
             var rect = ReactDOM.findDOMNode(this).getBoundingClientRect();
 
             if (!this.state.sticky) {
@@ -87,18 +95,49 @@ export default function wrappedInPageCard(WrappedComponent, index) {
             }
         }
 
-        render() {
-            var classNames = this.state.isVisible ? "PageCard" : "PageCard PageCard--hidden";
-            if (this.state.index !== 1) {
-                classNames = classNames + " PageCard-spacer";
+        getRootClasses() {
+            var classNames = this.state.isVisible ? 'PageCard' : 'PageCard PageCard--hidden';
+            if (this.state.index !== 1 && this.state.isMobile === false) {
+                classNames = classNames + ' PageCard-spacer';
             }
-            return(
-                <div className={classNames}>
+
+            if (this.state.isMobile === false || fullScreen) {
+                classNames = classNames + ' PageCard--default';
+            } else {
+                classNames = classNames + ' PageCard--mobile';
+            }
+
+            return classNames;
+        }
+
+        getContentClasses() {
+            var classNames = '';
+            if (this.state.sticky && !this.state.isMobile) {
+                classNames = 'PageCard-content--sticky';
+            }
+            else if (this.state.isMobile) {
+                classNames = 'PageCard-content--mobile';
+            }
+            else {
+                classNames = 'PageCard-content--default';
+            }
+
+            return classNames;
+        }
+
+        getComponent(mobileVersion) {
+            return (
+                <div className={this.getRootClasses()}>
                     {/* rootClass is the main class that needs to be applied to the WrappedComponent */}
-                    <WrappedComponent isSticky={this.state.sticky ? "PageCard-content--sticky" : "PageCard-content--default"} rootClass="PageCard-content" {...this.props}/>
+                    <WrappedComponent isSticky={this.getContentClasses()} rootClass="PageCard-content" {...this.props}/>
                     <ScrollEvent handleScrollCallback={this.handleScrollCallback} />
                 </div>
+            );
+        }
 
+        render() {
+            return(
+                this.getComponent(this.props.isMobile)
             );
         }
     }

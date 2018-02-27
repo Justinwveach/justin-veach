@@ -29,6 +29,7 @@
 
 .Project-smallImage {
     height: 100%;
+    min-height: 250px;
     position: relative;
     /*overflow: hidden;*/
     margin-left: var(--PageCard-paddingNegative-xs);
@@ -50,8 +51,7 @@
     transform: rotate(25deg) translateX(-50%);
     -webkit-transform: rotate(25deg) translateX(-50%);
     transform-origin: center;
-    top: 15% !important;
-
+    top: 20% !important;
 }
 
 @media (max-width: 767px) {
